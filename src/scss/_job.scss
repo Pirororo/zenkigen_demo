@@ -1,0 +1,471 @@
+/* ------------------------------------------------------ */
+/*
+ *  Job
+ */
+
+/* Home -------------------- */
+
+#job {
+  position: relative;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 80px 0;
+  .section-container {
+    width: 1024px;
+    margin: 0 auto;
+    font-family: $type-family-jp;
+    font-weight: 700;
+    color: $white;
+    section {
+      padding: 0 0;
+      h2 {
+        font-size: 2.4rem;
+        letter-spacing: 0.2rem;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 1.4rem;
+      }
+      ul {
+        li {
+          font-size: 1.4rem;
+          line-height: 1.7;
+          font-weight: 400;
+        }
+      }
+    }
+    section.schedule-container {
+      padding: 0 0 64px;
+
+      .schedule-ex-top {
+        text-align: center;
+        margin-bottom: 32px;
+      }
+      .schedule-flow-chart {
+        width: 1024px;
+        // height: 275px;
+        margin-bottom: 24px;
+        ul.schedule-flow-chart-list {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          li {
+            width: 160px;
+            text-align: center;
+            position: relative;
+            p.schedule-flow {
+              position: absolute;
+              left: 0;
+              top: 20px;
+              font-size: 1.4rem;
+              font-weight: 400;
+            }
+            dl {
+              dt {
+                height: 200px;
+                background-color: $primary;
+                display: flex;
+                align-items: center;
+                color: $white;
+
+                p.schedule-title {
+                  font-size: 1.6rem;
+                  font-weight: 700;
+                }
+              }
+              dd {
+                margin-top: 1px;
+                height: 74px;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                p {
+                  color: $black;
+                  font-size: 1.2rem;
+                  letter-spacing: 0;
+                  font-weight: 400;
+                }
+              }
+            }
+          }
+          li:after {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            z-index: 45;
+            margin: -50px -30px 0 0;
+            content: "";
+            width: 48px;
+            height: 14px;
+            background: url(../img/arrow_short.svg);
+          }
+          li:nth-child(1) {
+            z-index: 44;
+          }
+          li:nth-child(2) {
+            transition-delay: 0.2s;
+            z-index: 43;
+          }
+          li:nth-child(3) {
+            transition-delay: 0.3s;
+            z-index: 42;
+          }
+          li:last-child:after {
+            content: none;
+          }
+          li.schedule-flow-end {
+            transition-delay: 0.4s;
+            z-index: 41;
+            width: 505px;
+            dt {
+              height: 200px;
+              background-color: rgba(0, 0, 0, 0);
+              display: flex;
+              align-items: center;
+              color: $white;
+              ul {
+                display: flex;
+                justify-content: space-between;
+                li {
+                  height: 200px;
+                  display: flex;
+                  align-items: center;
+                  background-color: $primary;
+                }
+                li:after {
+                  margin: -12px -30px 0 0;
+                }
+              }
+
+              p.schedule-title {
+                font-size: 1.6rem;
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+      .schedule-bottom {
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 16px;
+      }
+      .schedule-ex-bottom {
+        font-size: 1.6rem;
+        font-weight: 700;
+        text-align: center;
+      }
+    }
+    section.apply-container {
+      padding: 0 0 64px;
+
+      .column2-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .apply-column {
+          width: 480px;
+          position: relative;
+          // overflow: hidden;
+          h3 {
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
+          .apply-data {
+            margin-top: 64px;
+          }
+        }
+      }
+    }
+    section.type-container {
+      padding: 0 0 0;
+
+      .column2-wrapper {
+        display: flex;
+        justify-content: space-between;
+        .type-column {
+          width: 480px;
+          position: relative;
+          h3 {
+          }
+
+          .type-data {
+            margin: 16px 0 16px;
+          }
+        }
+      }
+      .type-tags {
+        text-align: center;
+        overflow: hidden;
+        padding-right: 24px;
+        a {
+          float: left;
+          margin: 8px;
+          background-color: $bg-purple;
+          color: $white;
+          padding: 4px 8px;
+          border-radius: 24px;
+          font-size: 1.4rem;
+          font-weight: 400;
+
+          &:hover {
+            text-decoration: none;
+            opacity: 0.5;
+          }
+        }
+      }
+    }
+    section.data-container {
+      padding: 80px 0 0;
+
+      .data-more-link {
+        text-align: center;
+        width: 360px;
+        margin: 0 auto;
+
+        a {
+          border: 1px solid rgba(255, 255, 255, 0.4);
+          background: none;
+          width: 100%;
+          color: #fff;
+          padding: 20px 0;
+          margin-top: 24px;
+          display: block;
+          border-radius: 4px;
+
+          &:hover {
+            border-color: #fff;
+            background: none;
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Tablet
+@media (max-width: 1024px) {
+  #job {
+    .section-container {
+      width: 100%;
+      margin: 0;
+      padding: 0 20px;
+      section {
+        padding: 0 0;
+        p {
+          font-size: 1.2rem;
+        }
+        ul {
+          li {
+            font-size: 1.2rem;
+          }
+        }
+      }
+      section.schedule-container {
+        .schedule-flow-chart {
+          width: 100%;
+          ul.schedule-flow-chart-list {
+            li {
+              width: 150px;
+            }
+            li.schedule-flow-end {
+              width: 480px;
+            }
+          }
+        }
+      }
+      section.apply-container {
+        .column2-wrapper {
+          .apply-column {
+            width: 460px;
+          }
+        }
+      }
+      section.type-container {
+        .column2-wrapper {
+          .type-column {
+            width: 460px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// SP
+@media (max-width: 768px) {
+  #job {
+    padding: 64px 0;
+    .section-container {
+      width: 100%;
+      padding: 0 16px;
+      margin: 0;
+      section {
+        padding: 0 0;
+        h2 {
+          font-size: 2rem;
+          letter-spacing: 0.1rem;
+          margin-bottom: 24px;
+        }
+        h3 {
+          font-size: 1.4rem;
+          margin-bottom: 16px;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+        ul {
+          li {
+            font-size: 1.3rem;
+          }
+        }
+      }
+      section.schedule-container {
+        padding: 0 0 64px;
+        .schedule-ex-top {
+          margin-bottom: 24px;
+        }
+        .schedule-flow-chart {
+          width: 100%;
+          margin-bottom: 16px;
+          ul.schedule-flow-chart-list {
+            width: 100%;
+            display: block;
+            li {
+              width: 100%;
+              margin-bottom: 8px;
+              p.schedule-flow {
+                width: 60%;
+                top: 12px;
+                font-size: 1.2rem;
+              }
+              dl {
+                display: flex;
+                justify-content: space-between;
+                dt {
+                  width: 60%;
+                  height: 96px;
+                  p.schedule-title {
+                    font-size: 1.4rem;
+                    line-height: 1.4;
+                  }
+                }
+                dd {
+                  width: calc(40% - 1px);
+                  margin-top: 0;
+                  height: 96px;
+                  p {
+                    color: $black;
+                    font-size: 1.2rem;
+                  }
+                }
+              }
+            }
+            li:after {
+              display: none;
+            }
+
+            li.schedule-flow-end {
+              width: 100%;
+              dt {
+                height: auto;
+                ul {
+                  display: block;
+                  li {
+                    height: 96px;
+                    display: flex;
+                    margin-bottom: 8px;
+                    p.schedule-flow {
+                      width: 100%;
+                      top: 12px;
+                      font-size: 1.2rem;
+                    }
+                  }
+                  li:after {
+                    margin: -12px -30px 0 0;
+                  }
+                }
+
+                p.schedule-title {
+                  font-size: 1.4rem;
+                }
+              }
+              dd {
+                height: 304px;
+              }
+            }
+          }
+        }
+        .schedule-ex-bottom {
+          font-size: 1.4rem;
+        }
+      }
+      section.apply-container {
+        padding: 0 0 40px;
+        .column2-wrapper {
+          display: block;
+          .apply-column {
+            width: 100%;
+            margin-bottom: 32px;
+            h3 {
+              position: static;
+            }
+            .apply-data {
+              margin: 0;
+            }
+          }
+        }
+      }
+      section.type-container {
+        padding: 0 0 64px;
+        .column2-wrapper {
+          display: block;
+          .type-column {
+            width: 100%;
+            margin-bottom: 32px;
+            h3 {
+              margin-bottom: 8px;
+            }
+            .type-data {
+              margin: 0 0 16px;
+            }
+          }
+        }
+        .type-tags {
+          padding-right: 0;
+
+          a {
+            margin: 8px;
+            padding: 4px 8px;
+            border-radius: 24px;
+            font-size: 1.2rem;
+          }
+        }
+      }
+      section.data-container {
+        padding-top: 0;
+        .data-more-link {
+          text-align: center;
+          width: 100%;
+          margin: 0;
+          padding: 0 16px;
+
+          a {
+            width: 100%;
+            padding: 16px 0;
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+}

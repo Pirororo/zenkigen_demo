@@ -1,0 +1,68 @@
+/* ------------------------------------------------------ */
+/*
+ * Global Variables
+ */
+
+$white: rgb(252, 255, 255) !default;
+$black: rgb(0, 0, 1) !default;
+$primary: #55cfea !default;
+$secondary-lightgray: #9a9a9a !default; //light gray
+$secondary-gray: #484848 !default; //gray
+$disable-bg: #e6e6e6 !default;
+
+/* background color */
+$bg-dark-black: $black !default;
+$bg-dark-blue: #1e2128 !default;
+$bg-blue: #11e8bb;
+$bg-purple: #8200c9;
+
+/* type color */
+$type-color-main: $black !default;
+$type-color-gray: #909090 !default;
+$type-color-link: #39a8d8 !default;
+
+// CA Color
+$ca-green: #2d8c3c !default;
+$ca-green2: #82be28 !default;
+$ca-green-dark: #235531 !default;
+
+/* SNS */
+$facebook: #3b5998 !default;
+$instagram: #8a3ab9 !default;
+$instagram-gradient: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+) !default;
+$twitter: #00aced !default;
+
+/* Type Family */
+$type-family-main: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+
+/* JP Heading  */
+$type-family-jp: "Noto Sans JP", sans-serif;
+
+/* Margin */
+$m4: 4px;
+$m8: 8px;
+$m16: 16px;
+$m32: 32px;
+$m64: 64px;
+$m96: 96px;
+
+/* Content Width */
+$container-width: 1024px;
+
+/* Animaition */
+$scroll-fade-duration: 0.6s;
+$scroll-fade-delay: 0.2s;
+$scroll-fade-delay-plus1: 0.3s;
+$scroll-fade-delay-plus2: 0.4s;
+
+// $main-tiitle-y: 40px;
+$main-title-x: -380px;
+
+$title-shadow: 0px 0px 10px rgba(115, 173, 239, 0.4);

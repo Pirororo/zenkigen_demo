@@ -1,0 +1,288 @@
+/* ------------------------------------------------------ */
+/*
+ * Compornent
+ */
+
+/* loader -------------------- */
+
+/* BR -------------------- */
+
+//  PC
+@media (min-width: 1030px) {
+    .hidden-md-up {
+        display: none !important;
+    }
+
+    .hidden-md-down {
+        display: block !important;
+    }
+}
+
+// SP
+@media (max-width: 767px) {
+    .hidden-md-up {
+        display: block !important;
+    }
+
+    .hidden-md-down {
+        display: none !important;
+    }
+}
+
+.sc-fade {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    transform: translate3d(0px, 80px, 0px);
+    transition: opacity 0.8s linear 0.2s, transform 0.5s cubic-bezier(0.2, 1, 0.2, 1) 0.1s;
+}
+
+.sc-fade.in {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.sc-fade-on {
+    opacity: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    transform: translate3d(0px, 0, 0px);
+    transition: opacity 0.8s linear 0.2s, transform 0.5s cubic-bezier(0.2, 1, 0.2, 1) 0.1s;
+}
+
+.sc-fade-on.in {
+    opacity: 1;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    transform: translate3d(0px, 0px, 0px);
+}
+
+// .sc-fade-mask {
+//     position: relative;
+//     height: 3.2rem;
+//     line-height: 1;
+//     span.slide-fade {
+//         display: block;
+//         position: absolute;
+//         overflow: hidden;
+
+//         .slide-fade-text {
+//             opacity: 0;
+//         }
+//     }
+//     span.slide-fade::after {
+//         content: "";
+//         display: block;
+//         position: absolute;
+//         height: 3.2rem;
+//         width: 100%;
+//         right: 100%;
+//         top: 0;
+//         background: $white;
+//     }
+// }
+
+// .sc-fade-mask.in {
+//     span.slide-fade {
+//         .slide-fade-text {
+//             animation: fade-in 0.2s 1.2s ease forwards;
+//         }
+//     }
+//     span.slide-fade::after {
+//         animation: slide-out 0.8s 1s ease-in-out forwards;
+//     }
+// }
+
+/* Title -------------------- */
+
+/* Button -------------------- */
+.btn {
+    a {
+        text-align: center;
+        display: block;
+        padding: 16px 0;
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: $black;
+        letter-spacing: 0.2rem;
+        background-color: $primary;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        font-family: $type-family-jp;
+        font-weight: 700;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: none;
+            // opacity: .7;
+        }
+
+        span {
+            position: absolute;
+        }
+    }
+}
+
+/* loader -------------------- */
+
+#wrap-loader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10002;
+    // background-color: $bg-dark-blue;
+    transition: opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+    // transform-origin: right center;
+    // transform: scaleX(1);
+    // visibility: visible;
+    opacity: 1;
+}
+
+#wrap-loader.hide {
+    opacity: 0;
+}
+
+#wrap-loader.remove {
+    display: none;
+}
+
+@keyframes loader-out {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.loader {
+    // background: $white;
+    background: rgba(255, 255, 255, 0.2);
+    width: 16em;
+    height: 1px;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    text-indent: -9999em;
+    margin: 0 auto;
+    position: relative;
+    font-size: 11px;
+    // transform: translateZ(0) skew(-30deg);
+    // animation-delay: -0.16s;
+    overflow: hidden;
+}
+
+.loader:before {
+    // background: $bg-blue;
+    background: $white;
+
+    animation: load1 1s infinite ease-in-out normal forwards;
+    position: absolute;
+    top: 0;
+    content: "";
+    width: 4em;
+    height: 1px;
+    left: 0;
+    animation-delay: -0.32s;
+}
+
+@keyframes load1 {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(400%);
+    }
+}
+
+// SP
+@media (max-width: 768px) {
+    .loader {
+        top: 45%;
+    }
+}
+
+/* Back Button -------------------- */
+// .backtoTop {
+//     width: 160px;
+//     height: 100px;
+//     margin: 32px auto;
+
+//     a {
+//         padding: 24px 0;
+//         font-weight: bold;
+//         font-size: 1.6rem;
+//         letter-spacing: 0.7rem;
+//         color: $type-color-link;
+//         position: relative;
+//         display: block;
+//         margin: 0 auto;
+//         text-align: center;
+
+//         .line-arrow {
+//             width: 70px;
+//             position: absolute;
+//             left: 0;
+//             margin-left: -70px;
+//             top: 50%;
+//             display: block;
+//             height: 1px;
+//             background-color: $type-color-link;
+//             transition: all 0.3s ease;
+//         }
+
+//         .line-arrow::before {
+//             display: block;
+//             background-color: $type-color-link;
+//             width: 1px;
+//             height: 15px;
+//             position: absolute;
+//             bottom: -2px;
+//             content: "";
+//             left: 4px;
+//             transform: rotate(45deg);
+//         }
+
+//         &:hover {
+//             text-decoration: none;
+//             opacity: 0.7;
+
+//             .line-arrow {
+//                 margin-left: -90px;
+//             }
+//         }
+//     }
+// }
+
+// SP
+@media (max-width: 1030px) {
+    //     .apply-link,
+    //     .contact-link {
+    //         width: 180px;
+    //         height: auto;
+    //         margin: 0 auto 0;
+
+    //         a {
+    //             font-size: 1.6rem;
+    //             padding: 16px 0;
+
+    //             letter-spacing: 0.2rem;
+
+    //             .line-arrow {
+    //                 width: 50px;
+    //                 margin-right: -50px;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+// .dg.ac {
+//     position: fixed;
+//     top: 80px !important;
+//     left: 0;
+//     right: 0;
+//     height: 0;
+//     z-index: 0;
+// }

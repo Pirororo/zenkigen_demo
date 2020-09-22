@@ -1,0 +1,117 @@
+.p-top-company {
+  overflow: hidden;
+}
+
+.p-top-company__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.p-top-company__list .item {
+  width: calc(100% / 3);
+  position: relative;
+  height: 24rem;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+
+.p-top-company__list .item a {
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  color: #222629;
+}
+
+// .p-top-company__list .item a:hover {
+//   text-decoration: none;
+// }
+
+.p-top-company__list .item a:hover .bg {
+  transform: scale(1.05) !important;
+}
+
+.p-top-company__list .item a .bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: no-repeat center center;
+  background-size: cover;
+  -webkit-transition: -webkit-transform 0.3s linear 0s;
+  transition: -webkit-transform 0.3s linear 0s;
+  transition: transform 0.3s linear 0s;
+  transition: transform 0.3s linear 0s, -webkit-transform 0.3s linear 0s;
+  -webkit-transform: scale(1.005);
+  transform: scale(1.005);
+}
+
+.p-top-company__list .item__txt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-align: center;
+  line-height: 1.6;
+}
+
+.p-top-company__list .item.corporate .bg {
+  background-image: url(../img/company_img1.jpg);
+}
+
+.p-top-company__list .item.career .bg {
+  background-image: url(../img/company_img2.jpg);
+}
+
+.p-top-company__list .item.techinfo .bg {
+  background-image: url(../img/company_img3.jpg);
+}
+
+.p-top-company__list .item.creativenote .bg {
+  background-image: url(../img/company_img4.jpg);
+}
+
+.p-top-company__list .item.data .bg {
+  background-image: url(../img/company_img5.jpg);
+}
+
+.p-top-company__list .item.features .bg {
+  background-image: url(../img/company_img6.jpg);
+}
+
+@media only screen and (max-width: 768px) {
+  .p-top-company__list .item {
+    width: calc(100% / 2);
+    height: 19rem;
+  }
+
+  .p-top-company__list .item__txt {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .p-top-company__list {
+    display: block;
+  }
+
+  .p-top-company__list .item {
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 0.2rem;
+  }
+}
+
+.p-top-company__list {
+}
