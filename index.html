@@ -4,28 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>Zenkigen_Sample</title>
-  
+
     <!-- <script src="js/libs/three.min.js"></script> -->
-    <script src="js/libs/three.js"></script>
-
-    <script src="js/libs/Maf.js"></script>
-    <script src="js/libs/THREE.MeshLine_shaderCoutum.js"></script>
-    <!-- <script src="js/libs/perlin-noise-simplex.js"></script> -->
-    <script src="js/libs/SimplexNoise.js"></script>
-
-
-    <!-- fps表示とDAT表示に必要なjs -->
-    <script type="text/javascript" src="js/libs/dat.gui.js"></script>
-    <!-- カメラ系に必要なjs -->
-    <script type="text/javascript" src="js/libs/controls/OrbitControls.js"></script>
-    <!-- <script type="text/javascript" src="js/libs/Tween_yone.js"></script> -->
-    <!-- シェーダーに必要なjs -->
-    <!-- <script type="text/javascript" src="js/libs/postprocessing/EffectComposer.js"></script>
-    <script type="text/javascript" src="js/libs/postprocessing/ShaderPass.js"></script>
-    <script type="text/javascript" src="js/libs/postprocessing/RenderPass.js"></script>
-    <script type="text/javascript" src="js/libs/postprocessing/BloomPass.js"></script>
-    <script type="text/javascript" src="js/libs/shaders/ConvolutionShader.js"></script>
-    <script type="text/javascript" src="js/libs/shaders/CopyShader.js"></script> -->
 
     <style>
       /* リサイズ処理に必要 html,body,#WebGL-outputそれぞれ全部を100%にする！ */
@@ -56,43 +36,7 @@
 
 </head>
 <body>
-    <script type="x-shader/x-vertex" id="vertexshader">
-
-      attribute float scale;
-
-      void main() {
-
-        vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
-
-        //gl_PointSize = clamp(scale * ( 200.0 / - mvPosition.z ), 0.1, 4.0);
-        gl_PointSize = clamp(( 1000.0 / - mvPosition.z ), 0.1, 8.0)*1.2;
-        //gl_PointSize = scale * ( 10.0 * mvPosition.z );
-        //gl_PointSize = 3.0;
-
-        gl_Position = projectionMatrix * mvPosition;
-
-      }
-
-    </script>
-
-    <script type="x-shader/x-fragment" id="fragmentshader">
-
-      uniform vec3 color;
-
-      void main() {
-
-        if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
-
-        gl_FragColor = vec4( color, 0.8 );
-
-      }
-
-    </script>
-
     <div id="WebGL-output"></div>
-    <div id="WebGL-picture"></div>
-
-    <!-- これは最後によみこむ！ -->
     <script type="module" src="js/src/main.js"></script>
 </body>
 </html>
